@@ -1,0 +1,73 @@
+@use "cores";
+@use "reset";
+@use "variaveis";
+
+.item-produto {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+.produto-item img {
+  width: 280px;
+  height: 180px;
+  min-width: 100%;
+  border-radius: 16px;
+}
+.produto-botao {
+  display: block;
+  background-color: cores.$cordobotao;
+  color: cores.$corPrincipal;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 0px;
+  margin-top: 8px;
+  text-decoration: none;
+  &:hover {
+    background-color: cores.$botaohver;
+  }
+}
+//Break Point Mobile
+@media screen and (max-width: variaveis.$mobile) {
+  .container {
+    max-width: 80%;
+  }
+  .item-produto {
+    display: block;
+    width: 100%;
+  }
+
+  .produto-item {
+    width: 256px;
+    margin-bottom: 32px;
+    p,
+    h4 {
+      text-align: center;
+    }
+    img {
+      width: 256px;
+    }
+  }
+  .produto-item a {
+    width: 256px;
+  }
+}
+//  Break Point Tablet
+@media screen and (max-width: variaveis.$tablet) {
+  .container {
+    max-width: 80%;
+  }
+  .produtos {
+    margin-bottom: 80px;
+  }
+  .item-produto {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+  .produto-item p,
+  h4 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+@use 'cores';
+
+footer p {
+  display: flex;
+  color: cores.$corPrincipal;
+  height: 100px;
+  background-color: cores.$backgroudnreader;  
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
+}
